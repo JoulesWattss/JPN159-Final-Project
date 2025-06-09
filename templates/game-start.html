@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Game Start!</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/game-start.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Chasing the Dot: Pac-Man's Breakaway from the Norm</h1>
+    <p>
+      "Video games are unusual products that differ from other industrial goods
+      in which electrical power, machines and creative work is integrated. They
+      are an aggregation of a variety of disciplines, including engineering,
+      literature, the arts, psychology, and can be considered a cultural tool
+      for the ‘fun’ required by society."
+    </p>
+    <p>-Toru Iwatani, “The Pac-Man Principle: A User’s Guide to Capitalism”</p>
+    <!-- Building Pacman game -->
+    <div class="pacman"></div>
+    <div class="dot"></div>
+    <a href="{{ url_for('home') }}" class="transition-link">Back</a>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>

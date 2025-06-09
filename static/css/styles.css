@@ -1,0 +1,80 @@
+/* defining the pacman font */
+@font-face {
+    font-family: 'PacmanFont';
+    src: url('/static/fonts/pac-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* body styling */
+body {
+    font-family: 'Times New Roman', sans-serif !important;
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* dropdown menu container */
+.game-container {
+    position: absolute;  /* Allows for precise positioning with top and left elements*/
+    top: 55%;            
+    left: 50%;           
+    transform: translate(-50%, -50%);  /* Ensure it stays centered */
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;     
+    display: inline-block;
+  }  
+
+.dropdown-button {
+    /* Size adjustments */
+    padding: 50px 80px;
+    font-size: 40px;
+  
+    /* Color adjustments */
+    background-color: #a515bb; 
+    color: #FFFFFF;         
+}
+
+.dropdown-content {
+    display: none;               /* hidden by default */
+    position: absolute;          /* now relative to relative .dropdown position */
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* for perfect centering */
+    background-color: #333;
+    width: 200px;  
+    border-radius: 100px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;              /* show on hover of the entire dropdown container */
+  }
+
+.dropdown-button:active {
+    transform: scale(0.85);
+}
+  
+/* dropdown content specifications - applying PacmanFont to dropdown links */
+
+.dropdown-content a {
+    color: #f1f1f1;
+    padding: 12px 16px;
+    text-decoration-style: double;
+    text-decoration-color: #d477cd;
+    text-decoration-line: underline;
+    display: block;
+    font-family: 'PacmanFont', sans-serif !important;
+    transition: background-color 0.3s;
+}
+
+/* Increase spacing between items */
+.dropdown-content a + a {
+    margin-top: 8px;         
+  }
