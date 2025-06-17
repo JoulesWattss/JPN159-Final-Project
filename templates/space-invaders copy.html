@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders - The Game That Started It All</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/space-invaders.css') }}">
+</head>
+<body class="space-invaders-page">
+    <div class="game-page-container">
+        <header class="game-header">
+            <h1 class="space-invaders-title">SPACE INVADERS</h1>
+            <p class="tagline">The Invasion That Created an Industry</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <section class="quote-section">
+                <blockquote>
+                    "I took the space theme from Space Battleship Yamato, and the game concept was inspired by Breakout. 
+                    But instead of bouncing a ball to destroy bricks, you shoot at a wall of aliens—and they shoot back."
+                </blockquote>
+                <cite>- Tomohiro Nishikado, Creator of Space Invaders</cite>
+            </section>
+            
+            <section class="story-section">
+                <h2>The Alien Invasion of 1978</h2>
+                <div class="story-grid">
+                    <div class="story-card">
+                        <h3>Birth of a Genre</h3>
+                        <p>Released in June 1978 in Japan, Space Invaders didn't see immediate success. But by year's end, 
+                        over 100,000 arcade machines had been sold. The game was so popular it caused a shortage of 100-yen coins!</p>
+                        <p>Originally titled "Space Monsters," the game was renamed by Nishikado's superiors. It combined 
+                        the space theme from anime with Breakout's gameplay, creating the template for all shoot 'em up games.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>Simple Yet Revolutionary</h3>
+                        <p>The beauty of Space Invaders lies in its simplicity: slide left and right, fire one missile at a time, 
+                        defend Earth from 55 aliens marching in formation. The ominous marching sound speeds up as you destroy ships, 
+                        building tension with every shot.</p>
+                        <p>Like all games of its era, Space Invaders is futile—you will always lose, and the aliens will always win. 
+                        But how long can you last? That eternal challenge defined arcade gaming.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>The First Licensing Deal</h3>
+                        <p>In 1980, Atari programmer Rick Maurer created a port for the Atari 2600, leading to the first official 
+                        licensing of an arcade game to a home console. The home version sold over 1 million copies in its first year, 
+                        turning the Atari 2600 into a massive success.</p>
+                        <p>The Atari version boasted "112 video games"—actually just variations including moving shields, 
+                        zigzagging missiles, and invisible invaders. This set the template for home gaming adaptations.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>Cultural Phenomenon</h3>
+                        <p>Space Invaders became one of the most widely ported games ever, appearing on everything from LED handhelds 
+                        to digital watches. It kicked off the entire shoot 'em up genre, inspiring Galaga, Galaxian, Defender, and countless others.</p>
+                        <p>The game's grid of aliens, shield barriers, and bonus UFO became iconic gaming symbols. Its influence extends 
+                        far beyond gaming—the pixelated alien is now a universal symbol of retro gaming culture.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="impact-section">
+                <h2>Legacy & Impact</h2>
+                <ul class="impact-list">
+                    <li>Created the shoot 'em up genre that dominated arcades for years</li>
+                    <li>First game to cause a currency shortage due to popularity</li>
+                    <li>Pioneered the arcade-to-home licensing model</li>
+                    <li>Established high scores as the primary gaming achievement</li>
+                    <li>Introduced increasing difficulty through speed mechanics</li>
+                    <li>Inspired the "golden age" of arcade gaming (1978-1983)</li>
+                </ul>
+            </section>
+        </div>
+        
+        <nav class="game-nav">
+            <a href="/pacman" class="nav-link">← Previous: Pac-Man</a>
+            <a href="/mario" class="nav-link">Next: Super Mario Bros. →</a>
+        </nav>
+    </div>
+</body>
+</html>
