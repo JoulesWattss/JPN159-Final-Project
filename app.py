@@ -8,10 +8,14 @@ def home():
     return render_template('index.html')
 
 @app.route('/game-start')
-def option1():
+def game_start():
     return render_template('game-start.html')
 
-# Route for handling dropdown selections
+@app.route('/artists-statement')
+def artists_statement():
+    return render_template('artists-statement.html')
+
+# Route for handling dropdown selections (keeping for backward compatibility)
 @app.route('/dropdown', methods=['POST'])
 def dropdown():
     selected_option = request.form['option']
@@ -19,4 +23,3 @@ def dropdown():
 
 if __name__ == "__main__":
     app.run(debug=True)
-

@@ -14,67 +14,67 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* dropdown menu container */
+/* main container */
 .game-container {
-    position: absolute;  /* Allows for precise positioning with top and left elements*/
-    top: 55%;            
-    left: 50%;           
-    transform: translate(-50%, -50%);  /* Ensure it stays centered */
     text-align: center;
 }
 
-.dropdown {
-    position: relative;     
+.main-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 4rem;
+    color: #ffee07;
+    margin-bottom: 3rem;
+    text-shadow: 3px 3px 0px #a515bb;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu-button {
     display: inline-block;
-  }  
-
-.dropdown-button {
-    /* Size adjustments */
-    padding: 50px 80px;
-    font-size: 40px;
-  
-    /* Color adjustments */
-    background-color: #a515bb; 
-    color: #FFFFFF;         
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    font-family: 'PacmanFont', sans-serif;
+    background-color: #a515bb;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    min-width: 250px;
 }
 
-.dropdown-content {
-    display: none;               /* hidden by default */
-    position: absolute;          /* now relative to relative .dropdown position */
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%); /* for perfect centering */
-    background-color: #333;
-    width: 200px;  
-    border-radius: 100px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;              /* show on hover of the entire dropdown container */
-  }
-
-.dropdown-button:active {
-    transform: scale(0.85);
-}
-  
-/* dropdown content specifications - applying PacmanFont to dropdown links */
-
-.dropdown-content a {
-    color: #f1f1f1;
-    padding: 12px 16px;
-    text-decoration-style: double;
-    text-decoration-color: #d477cd;
-    text-decoration-line: underline;
-    display: block;
-    font-family: 'PacmanFont', sans-serif !important;
-    transition: background-color 0.3s;
+.menu-button:hover {
+    background-color: #d477cd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
 
-/* Increase spacing between items */
-.dropdown-content a + a {
-    margin-top: 8px;         
-  }
+.menu-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .menu-button {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        min-width: 200px;
+    }
+}

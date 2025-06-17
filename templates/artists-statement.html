@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist's Statement - Pixel Pioneers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/artists-statement.css') }}">
+</head>
+<body>
+    <div class="statement-container">
+        <h1 class="statement-title">Artist's Statement</h1>
+        
+        <div class="statement-content">
+            <p class="statement-text">
+                "Video games are unusual products that differ from other industrial goods 
+                in which electrical power, machines and creative work is integrated. They 
+                are an aggregation of a variety of disciplines, including engineering, 
+                literature, the arts, psychology, and can be considered a cultural tool 
+                for the 'fun' required by society."
+            </p>
+            
+            <p class="statement-attribution">
+                -Toru Iwatani, "The Pac-Man Principle: A User's Guide to Capitalism"
+            </p>
+            
+            <div class="statement-body">
+                <p>
+                    This interactive experience explores the intersection of classic arcade 
+                    aesthetics and modern web technology. Through the lens of Pac-Man's 
+                    iconic design language, we examine how simple geometric forms and 
+                    vibrant colors can create compelling digital narratives.
+                </p>
+                
+                <p>
+                    The project serves as both homage and critique, celebrating the 
+                    foundational elements of game design while questioning the boundaries 
+                    between art, entertainment, and cultural expression in the digital age.
+                </p>
+            </div>
+        </div>
+        
+        <a href="{{ url_for('home') }}" class="back-button">Back to Menu</a>
+    </div>
+</body>
+</html>

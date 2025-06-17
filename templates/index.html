@@ -3,23 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Interactive Dropdown Menu</title>
+        <title>Pixel Pioneers</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     </head>
     
     <body>
         <div class="game-container">
-            <div class="dropdown">
-                <button class="dropdown-button" style="font-family: 'PacmanFont', sans-serif;">Game Settings</button>
-                <div class="dropdown-content">
-                    <a href="/game-start" class="button">Game Start</a>
-                    <a href="/menu" data-option="button">Menu</a>
-                    <a href="/settings" data-option="settings">Settings</a>
-                </div>
+            <h1 class="main-title">Pixel Pioneers</h1>
+            <div class="button-container">
+                <a href="/game-start" class="menu-button">Game Start</a>
+                <a href="/artists-statement" class="menu-button">Artist's Statement</a>
             </div>
-            <div id="response-message"></div>
         </div>
-        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
     </body>
 </html>
-
