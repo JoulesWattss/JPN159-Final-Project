@@ -14,6 +14,16 @@
         </header>
         
         <div class="content-wrapper">
+            <section class="mini-game-section">
+                <h2 class="mini-game-title">Play Mini Mario</h2>
+                <canvas id="mario-canvas" class="game-canvas" width="400" height="300"></canvas>
+                <div class="game-controls">
+                    <p>Use A/D or Arrow Keys to move, SPACE to jump</p>
+                    <p class="game-score">Coins: <span id="mario-score">0</span></p>
+                    <p class="game-score">Lives: <span id="mario-lives">3</span></p>
+                </div>
+            </section>
+            
             <section class="quote-section">
                 <blockquote>
                     "A game should be something that anybody can pick up and play, and enjoy. 
@@ -25,43 +35,63 @@
             <section class="story-section">
                 <h2>Rising from the Ashes</h2>
                 <div class="story-grid">
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>From Jumpman to Icon</h3>
-                        <p>Mario first appeared as "Jumpman" in 1981's Donkey Kong, created by a young Shigeru Miyamoto. 
-                        He was renamed Mario in 1982 after Nintendo's warehouse landlord, Mario Segale, who burst in 
-                        demanding overdue rent during a company meeting.</p>
-                        <p>Miyamoto gave Mario his iconic look out of necessity: a cap because animating hair was difficult, 
-                        a mustache to define his nose, and overalls to show arm movement clearly. Technical limitations 
-                        became timeless design.</p>
+                        <div class="expandable-content">
+                            <p>Mario first appeared as "Jumpman" in 1981's Donkey Kong, created by a young Shigeru Miyamoto. 
+                            He was renamed Mario in 1982 after Nintendo's warehouse landlord, Mario Segale, who burst in 
+                            demanding overdue rent during a company meeting.</p>
+                            <p>Miyamoto gave Mario his iconic look out of necessity: a cap because animating hair was difficult, 
+                            a mustache to define his nose, and overalls to show arm movement clearly. Technical limitations 
+                            became timeless design.</p>
+                            <p>The character's profession changed from carpenter to plumber when he appeared in Mario Bros. (1983), 
+                            setting up the pipe-filled world that would define the franchise.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>The Game That Changed Everything</h3>
-                        <p>Released in September 1985 for the Famicom in Japan, Super Mario Bros. arrived when the 
-                        North American video game industry had collapsed. Revenues had fallen from $3.2 billion in 1983 
-                        to just $100 million by 1985.</p>
-                        <p>Nintendo's "Seal of Quality" and the exceptional gameplay of Super Mario Bros. restored 
-                        retailer and consumer confidence. The game sold over 40 million copies, making it one of the 
-                        best-selling games of all time.</p>
+                        <div class="expandable-content">
+                            <p>Released in September 1985 for the Famicom in Japan, Super Mario Bros. arrived when the 
+                            North American video game industry had collapsed. Revenues had fallen from $3.2 billion in 1983 
+                            to just $100 million by 1985.</p>
+                            <p>Nintendo's "Seal of Quality" and the exceptional gameplay of Super Mario Bros. restored 
+                            retailer and consumer confidence. The game sold over 40 million copies, making it one of the 
+                            best-selling games of all time.</p>
+                            <p>The game's success in America was so complete that it essentially created the modern 
+                            video game industry, establishing Nintendo as the dominant force for decades.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>Revolutionary Design</h3>
-                        <p>Super Mario Bros. introduced concepts that became industry standards: scrolling levels, 
-                        hidden secrets, power-ups that changed gameplay, and a carefully crafted difficulty curve 
-                        that taught through design.</p>
-                        <p>The first Goomba forces you to learn jumping, the first pipe suggests exploration, 
-                        the first block rewards curiosity. Every element was purposefully placed to guide players 
-                        without explicit instruction.</p>
+                        <div class="expandable-content">
+                            <p>Super Mario Bros. introduced concepts that became industry standards: scrolling levels, 
+                            hidden secrets, power-ups that changed gameplay, and a carefully crafted difficulty curve 
+                            that taught through design.</p>
+                            <p>The first Goomba forces you to learn jumping, the first pipe suggests exploration, 
+                            the first block rewards curiosity. Every element was purposefully placed to guide players 
+                            without explicit instruction.</p>
+                            <p>The game's level design philosophy of "teaching without teaching" became the gold standard 
+                            for game design, influencing countless developers and establishing design principles still used today.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>Cultural Renaissance</h3>
-                        <p>By 1990, Mario was more recognizable to American children than Mickey Mouse. The character 
-                        spawned TV shows, movies, merchandise, and established video games as mainstream entertainment 
-                        rather than a passing fad.</p>
-                        <p>The Super Mario series has generated over $30 billion in revenue, becoming the best-selling 
-                        video game franchise of all time and inspiring generations of game developers worldwide.</p>
+                        <div class="expandable-content">
+                            <p>By 1990, Mario was more recognizable to American children than Mickey Mouse. The character 
+                            spawned TV shows, movies, merchandise, and established video games as mainstream entertainment 
+                            rather than a passing fad.</p>
+                            <p>The Super Mario series has generated over $30 billion in revenue, becoming the best-selling 
+                            video game franchise of all time and inspiring generations of game developers worldwide.</p>
+                            <p>Mario's success proved that video games could be art, entertainment, and cultural touchstones 
+                            that transcend age, gender, and cultural boundaries.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                 </div>
             </section>
@@ -75,6 +105,8 @@
                     <li>Pioneered game design principles still used today</li>
                     <li>Made Nintendo a household name globally</li>
                     <li>Proved video games could be art and entertainment for all ages</li>
+                    <li>Established the concept of "teaching through gameplay"</li>
+                    <li>Created the modern video game industry structure</li>
                 </ul>
             </section>
         </div>
@@ -84,5 +116,21 @@
             <a href="/" class="nav-link">Back to Home →</a>
         </nav>
     </div>
+
+    <script src="/static/js/mario-mini.js"></script>
+    <script>
+        function toggleExpand(card) {
+            const content = card.querySelector('.expandable-content');
+            const button = card.querySelector('.expand-button');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                button.textContent = 'Click to Read More';
+            } else {
+                content.classList.add('expanded');
+                button.textContent = 'Click to Read Less';
+            }
+        }
+    </script>
 </body>
 </html>

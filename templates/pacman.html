@@ -14,6 +14,16 @@
         </header>
         
         <div class="content-wrapper">
+            <section class="mini-game-section">
+                <h2 class="mini-game-title">Play Mini Pac-Man</h2>
+                <canvas id="pacman-canvas" class="game-canvas" width="400" height="300"></canvas>
+                <div class="game-controls">
+                    <p>Use WASD or Arrow Keys to move Pac-Man</p>
+                    <p class="game-score">Score: <span id="pacman-score">0</span></p>
+                    <p class="game-score">Lives: <span id="pacman-lives">3</span></p>
+                </div>
+            </section>
+            
             <section class="quote-section">
                 <blockquote>
                     "Video games are unusual products that differ from other industrial goods in which electrical power, 
@@ -27,38 +37,58 @@
             <section class="story-section">
                 <h2>A Revolution in the Arcade</h2>
                 <div class="story-grid">
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>Breaking Gender Barriers</h3>
-                        <p>In the late 1970s, arcades were dominated by violent "kill the alien" games aimed at teenage boys. 
-                        Iwatani wanted to create "a brighter and more fun place where women and couples could feel comfortable going."</p>
-                        <p>His insight? "Women also enjoy the act of eating, or 'taberu' in Japanese." This simple observation 
-                        led to one of gaming's most revolutionary concepts.</p>
+                        <div class="expandable-content">
+                            <p>In the late 1970s, arcades were dominated by violent "kill the alien" games aimed at teenage boys. 
+                            Iwatani wanted to create "a brighter and more fun place where women and couples could feel comfortable going."</p>
+                            <p>His insight? "Women also enjoy the act of eating, or 'taberu' in Japanese." This simple observation 
+                            led to one of gaming's most revolutionary concepts.</p>
+                            <p>The game's non-violent nature and cute character design attracted a broader demographic, 
+                            fundamentally changing who played video games and where they were played.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>The Birth of a Character</h3>
-                        <p>Originally named "PuckMan" from the Japanese phrase "paku paku taberu" (gobbling something up), 
-                        the character's design came from a pizza with a slice missing. When brought to America, 
-                        Midway changed the name fearing vandalism would turn the "P" into an "F".</p>
-                        <p>The ghosts were inspired by Japanese manga "Little Ghost Q-Taro" and American cartoon 
-                        "Casper the Friendly Ghost," with their cat-and-mouse dynamic borrowed from "Tom and Jerry."</p>
+                        <div class="expandable-content">
+                            <p>Originally named "PuckMan" from the Japanese phrase "paku paku taberu" (gobbling something up), 
+                            the character's design came from a pizza with a slice missing. When brought to America, 
+                            Midway changed the name fearing vandalism would turn the "P" into an "F".</p>
+                            <p>The ghosts were inspired by Japanese manga "Little Ghost Q-Taro" and American cartoon 
+                            "Casper the Friendly Ghost," with their cat-and-mouse dynamic borrowed from "Tom and Jerry."</p>
+                            <p>Each ghost had its own personality: Blinky (red) was aggressive, Pinky (pink) tried to ambush, 
+                            Inky (cyan) was unpredictable, and Clyde (orange) was the least threatening.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>Simplicity as Strategy</h3>
-                        <p>Pac-Man required no buttons—just a joystick. This accessibility, combined with its 
-                        "easy to learn, difficult to master" gameplay, created an addictive loop that appealed to everyone.</p>
-                        <p>The simple, friendly design allowed for endless variations: Ms. Pac-Man, Super Pac-Man, 
-                        and countless merchandise opportunities, from lunchboxes to a hit song.</p>
+                        <div class="expandable-content">
+                            <p>Pac-Man required no buttons—just a joystick. This accessibility, combined with its 
+                            "easy to learn, difficult to master" gameplay, created an addictive loop that appealed to everyone.</p>
+                            <p>The simple, friendly design allowed for endless variations: Ms. Pac-Man, Super Pac-Man, 
+                            and countless merchandise opportunities, from lunchboxes to a hit song.</p>
+                            <p>The maze design was carefully crafted to create strategic choices while maintaining 
+                            the game's accessibility. Every tunnel, corner, and power pellet placement was intentional.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                     
-                    <div class="story-card">
+                    <div class="story-card" onclick="toggleExpand(this)">
                         <h3>Cultural Phenomenon</h3>
-                        <p>By 1987, nearly 300,000 arcade units had been sold worldwide. The game spawned a Saturday morning cartoon, 
-                        breakfast cereal, and even a top 10 hit song. When Google created a playable logo in 2010, 
-                        it cost the world $120 million in lost productivity.</p>
-                        <p>It took 20 years for Billy Mitchell to achieve the first perfect game—3,333,360 points 
-                        on level 256, where a memory overflow makes the game unplayable.</p>
+                        <div class="expandable-content">
+                            <p>By 1987, nearly 300,000 arcade units had been sold worldwide. The game spawned a Saturday morning cartoon, 
+                            breakfast cereal, and even a top 10 hit song. When Google created a playable logo in 2010, 
+                            it cost the world $120 million in lost productivity.</p>
+                            <p>It took 20 years for Billy Mitchell to achieve the first perfect game—3,333,360 points 
+                            on level 256, where a memory overflow makes the game unplayable.</p>
+                            <p>The character became so iconic that it transcended gaming, appearing in art galleries, 
+                            fashion, and becoming a symbol of 1980s pop culture that endures today.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
                     </div>
                 </div>
             </section>
@@ -71,6 +101,8 @@
                     <li>Expanded gaming's demographic beyond teenage boys</li>
                     <li>Established the "mascot" concept in video games</li>
                     <li>Generated over $2.5 billion in quarters by the 1990s</li>
+                    <li>Created the template for maze-chase games</li>
+                    <li>Proved that non-violent games could be commercially successful</li>
                 </ul>
             </section>
         </div>
@@ -80,5 +112,21 @@
             <a href="/space-invaders" class="nav-link">Next: Space Invaders →</a>
         </nav>
     </div>
+
+    <script src="/static/js/pacman-mini.js"></script>
+    <script>
+        function toggleExpand(card) {
+            const content = card.querySelector('.expandable-content');
+            const button = card.querySelector('.expand-button');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                button.textContent = 'Click to Read More';
+            } else {
+                content.classList.add('expanded');
+                button.textContent = 'Click to Read Less';
+            }
+        }
+    </script>
 </body>
 </html>
