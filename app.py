@@ -7,9 +7,18 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/game-start')
-def game_start():
-    return render_template('game-start.html')
+# Game routes for each era
+@app.route('/pacman')
+def pacman():
+    return render_template('pacman.html')
+
+@app.route('/space-invaders')
+def space_invaders():
+    return render_template('space-invaders.html')
+
+@app.route('/super-mario')
+def super_mario():
+    return render_template('super-mario.html')
 
 @app.route('/artists-statement')
 def artists_statement():

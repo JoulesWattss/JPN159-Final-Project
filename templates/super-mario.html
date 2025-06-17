@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario Bros (1985) - Japanese Gaming Evolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="game-page">
+        <div class="game-header">
+            <h1 class="game-page-title" style="color: #ff4444;">Super Mario Bros (1985)</h1>
+            <p class="subtitle">Home Console Domination</p>
+        </div>
+        
+        <div class="game-content">
+            <div class="content-section">
+                <h2 class="section-title">Play Mini Mario</h2>
+                <div class="game-container-embed" id="mario-game">
+                    <p>Mini Mario Game Loading...</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">Historical Context</h2>
+                <p>You can add your content here about Super Mario Bros' role in reviving the home console market, Nintendo's marketing strategies, and the game's lasting impact on platform gaming.</p>
+                
+                <h3 style="color: #d477cd; margin-top: 2rem;">Key Points:</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Saved the video game industry</li>
+                    <li>Perfected side-scrolling platformer</li>
+                    <li>Established Nintendo's dominance</li>
+                    <li>Created gaming's most iconic character</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="/space-invaders" class="nav-button">← Previous: Space Invaders</a>
+            <a href="/" class="nav-button">Back to Timeline</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/mario-mini.js') }}"></script>
+</body>
+</html>

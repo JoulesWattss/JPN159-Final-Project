@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man (1980) - Japanese Gaming Evolution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="game-page">
+        <div class="game-header">
+            <h1 class="game-page-title" style="color: #ffee07;">Pac-Man (1980)</h1>
+            <p class="subtitle">The Birth of Character Gaming</p>
+        </div>
+        
+        <div class="game-content">
+            <div class="content-section">
+                <h2 class="section-title">Play Mini Pac-Man</h2>
+                <div class="game-container-embed" id="pacman-game">
+                    <p>Mini Pac-Man Game Loading...</p>
+                </div>
+            </div>
+            
+            <div class="content-section">
+                <h2 class="section-title">Historical Context</h2>
+                <p>You can add your content here about Pac-Man's marketing strategies, technological innovations, and cultural impact in Japan and internationally.</p>
+                
+                <h3 style="color: #d477cd; margin-top: 2rem;">Key Points:</h3>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>First game designed to appeal to women</li>
+                    <li>Revolutionary character-based gameplay</li>
+                    <li>Merchandising phenomenon</li>
+                    <li>Global cultural icon</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="/" class="nav-button">← Back to Timeline</a>
+            <a href="/space-invaders" class="nav-button">Next: Space Invaders →</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/pacman-mini.js') }}"></script>
+</body>
+</html>
