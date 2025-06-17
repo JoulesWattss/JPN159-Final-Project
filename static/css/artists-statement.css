@@ -17,7 +17,7 @@ body {
 }
 
 .statement-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -39,28 +39,38 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+.content-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.text-section {
+    flex: 1;
+}
+
+#snake-canvas {
+    border: 3px solid #a515bb;
+    border-radius: 10px;
+    background-color: #1a1a2e;
+}
+
 .statement-text {
     font-style: italic;
     font-size: 1.1rem;
     color: #ffee07;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin: 0;
+    padding: 1.5rem;
     background-color: #1d2630;
     border-left: 4px solid #a515bb;
     border-radius: 5px;
-}
-
-.statement-attribution {
-    text-align: right;
-    color: #d477cd;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.statement-body p {
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-    color: #f1f1f1;
+    line-height: 1.8;
 }
 
 .back-button {
@@ -101,7 +111,18 @@ body {
         padding: 1.5rem;
     }
     
+    .content-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
     .statement-text {
         font-size: 1rem;
+    }
+    
+    #snake-canvas {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
 }
