@@ -3,44 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario Bros (1985) - Japanese Gaming Evolution</title>
+    <title>Super Mario Bros. - The Plumber Who Saved Gaming</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mario.css') }}">
 </head>
-<body>
-    <div class="game-page">
-        <div class="game-header">
-            <h1 class="game-page-title" style="color: #ff4444;">Super Mario Bros (1985)</h1>
-            <p class="subtitle">Home Console Domination</p>
-        </div>
+<body class="mario-page">
+    <div class="game-page-container">
+        <header class="game-header">
+            <h1 class="mario-title">SUPER MARIO BROS.</h1>
+            <p class="tagline">The Plumber Who Saved an Industry</p>
+        </header>
         
-        <div class="game-content">
-            <div class="content-section">
-                <h2 class="section-title">Play Mini Mario</h2>
-                <div class="game-container-embed" id="mario-game">
-                    <p>Mini Mario Game Loading...</p>
-                </div>
-            </div>
+        <div class="content-wrapper">
+            <section class="quote-section">
+                <blockquote>
+                    "A game should be something that anybody can pick up and play, and enjoy. 
+                    The game should be fun to play, not just to watch someone else play."
+                </blockquote>
+                <cite>- Shigeru Miyamoto, Creator of Mario</cite>
+            </section>
             
-            <div class="content-section">
-                <h2 class="section-title">Historical Context</h2>
-                <p>You can add your content here about Super Mario Bros' role in reviving the home console market, Nintendo's marketing strategies, and the game's lasting impact on platform gaming.</p>
-                
-                <h3 style="color: #d477cd; margin-top: 2rem;">Key Points:</h3>
-                <ul style="text-align: left; margin-top: 1rem;">
-                    <li>Saved the video game industry</li>
-                    <li>Perfected side-scrolling platformer</li>
-                    <li>Established Nintendo's dominance</li>
-                    <li>Created gaming's most iconic character</li>
+            <section class="story-section">
+                <h2>Rising from the Ashes</h2>
+                <div class="story-grid">
+                    <div class="story-card">
+                        <h3>From Jumpman to Icon</h3>
+                        <p>Mario first appeared as "Jumpman" in 1981's Donkey Kong, created by a young Shigeru Miyamoto. 
+                        He was renamed Mario in 1982 after Nintendo's warehouse landlord, Mario Segale, who burst in 
+                        demanding overdue rent during a company meeting.</p>
+                        <p>Miyamoto gave Mario his iconic look out of necessity: a cap because animating hair was difficult, 
+                        a mustache to define his nose, and overalls to show arm movement clearly. Technical limitations 
+                        became timeless design.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>The Game That Changed Everything</h3>
+                        <p>Released in September 1985 for the Famicom in Japan, Super Mario Bros. arrived when the 
+                        North American video game industry had collapsed. Revenues had fallen from $3.2 billion in 1983 
+                        to just $100 million by 1985.</p>
+                        <p>Nintendo's "Seal of Quality" and the exceptional gameplay of Super Mario Bros. restored 
+                        retailer and consumer confidence. The game sold over 40 million copies, making it one of the 
+                        best-selling games of all time.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>Revolutionary Design</h3>
+                        <p>Super Mario Bros. introduced concepts that became industry standards: scrolling levels, 
+                        hidden secrets, power-ups that changed gameplay, and a carefully crafted difficulty curve 
+                        that taught through design.</p>
+                        <p>The first Goomba forces you to learn jumping, the first pipe suggests exploration, 
+                        the first block rewards curiosity. Every element was purposefully placed to guide players 
+                        without explicit instruction.</p>
+                    </div>
+                    
+                    <div class="story-card">
+                        <h3>Cultural Renaissance</h3>
+                        <p>By 1990, Mario was more recognizable to American children than Mickey Mouse. The character 
+                        spawned TV shows, movies, merchandise, and established video games as mainstream entertainment 
+                        rather than a passing fad.</p>
+                        <p>The Super Mario series has generated over $30 billion in revenue, becoming the best-selling 
+                        video game franchise of all time and inspiring generations of game developers worldwide.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="impact-section">
+                <h2>Legacy & Impact</h2>
+                <ul class="impact-list">
+                    <li>Saved the video game industry from complete collapse</li>
+                    <li>Established the side-scrolling platformer as a dominant genre</li>
+                    <li>Created the template for character-driven franchises</li>
+                    <li>Pioneered game design principles still used today</li>
+                    <li>Made Nintendo a household name globally</li>
+                    <li>Proved video games could be art and entertainment for all ages</li>
                 </ul>
-            </div>
+            </section>
         </div>
         
-        <div class="navigation">
-            <a href="/space-invaders" class="nav-button">← Previous: Space Invaders</a>
-            <a href="/" class="nav-button">Back to Timeline</a>
-        </div>
+        <nav class="game-nav">
+            <a href="/space-invaders" class="nav-link">← Previous: Space Invaders</a>
+            <a href="/" class="nav-link">Back to Home →</a>
+        </nav>
     </div>
-
-    <script src="{{ url_for('static', filename='js/mario-mini.js') }}"></script>
 </body>
 </html>
