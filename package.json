@@ -1,14 +1,13 @@
 {
   "name": "pixel-pioneers-web",
   "version": "1.0.0",
-  "description": "Pixel Pioneers web application",
-  "main": "server.js",
+  "description": "Pixel Pioneers web application - Static Site",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo \"No build process required - static files served directly\""
+    "start": "npx http-server . -p 3000",
+    "dev": "npx http-server . -p 3000"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "http-server": "^14.1.1"
   }
 }
