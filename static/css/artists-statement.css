@@ -1,0 +1,127 @@
+/* defining the pacman font */
+@font-face {
+    font-family: 'PacmanFont';
+    src: url('/static/fonts/pac-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #282828;
+    color: #fff;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.statement-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.statement-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 3rem;
+    color: #ffee07;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px #a515bb;
+}
+
+.statement-content {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.content-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.text-section {
+    flex: 1;
+}
+
+#snake-canvas {
+    border: 3px solid #a515bb;
+    border-radius: 10px;
+    background-color: #1a1a2e;
+}
+
+.statement-text {
+    font-size: 1.1rem;
+    color: #ffee07;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: #1d2630;
+    border-left: 4px solid #a515bb;
+    border-radius: 5px;
+    line-height: 1.8;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'PacmanFont', sans-serif;
+    background-color: #a515bb;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.back-button:hover {
+    background-color: #d477cd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.back-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .statement-container {
+        padding: 1rem;
+    }
+    
+    .statement-title {
+        font-size: 2rem;
+    }
+    
+    .statement-content {
+        padding: 1.5rem;
+    }
+    
+    .content-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .statement-text {
+        font-size: 1rem;
+    }
+    
+    #snake-canvas {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}

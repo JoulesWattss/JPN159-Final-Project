@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders - The Game That Started It All</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body class="space-invaders-page">
+    <div class="game-page-container">
+        <header class="game-header">
+            <h1 class="space-invaders-title">SPACE INVADERS</h1>
+            <p class="tagline">The Invasion That Created an Industry</p>
+        </header>
+        
+        <div class="content-wrapper">
+            <section class="mini-game-section">
+                <h2 class="mini-game-title">Play Mini Space Invaders</h2>
+                <canvas id="invaders-canvas" class="game-canvas" width="400" height="300"></canvas>
+                <div class="game-controls">
+                    <p>Use A/D or Arrow Keys to move, SPACE to shoot</p>
+                    <p class="game-score">Score: <span id="invaders-score">0</span></p>
+                    <p class="game-score">Lives: <span id="invaders-lives">3</span></p>
+                </div>
+            </section>
+            
+            <section class="quote-section">
+                <blockquote>
+                    "I took the space theme from Space Battleship Yamato, and the game concept was inspired by Breakout. 
+                    But instead of bouncing a ball to destroy bricks, you shoot at a wall of aliens—and they shoot back."
+                </blockquote>
+                <cite>- Tomohiro Nishikado, Creator of Space Invaders</cite>
+            </section>
+            
+            <section class="story-section">
+                <h2>The Alien Invasion of 1978</h2>
+                <div class="story-grid">
+                    <div class="story-card" onclick="toggleExpand(this)">
+                        <h3>Birth of a Genre</h3>
+                        <div class="expandable-content">
+                            <p>Released in June 1978 in Japan, Space Invaders didn't see immediate success. But by year's end, 
+                            over 100,000 arcade machines had been sold. The game was so popular it caused a shortage of 100-yen coins!</p>
+                            <p>Originally titled "Space Monsters," the game was renamed by Nishikado's superiors. It combined 
+                            the space theme from anime with Breakout's gameplay, creating the template for all shoot 'em up games.</p>
+                            <p>The game's success was so unprecedented that it single-handedly created the arcade industry 
+                            as we know it, inspiring countless imitators and establishing the business model for decades.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
+                    </div>
+                    
+                    <div class="story-card" onclick="toggleExpand(this)">
+                        <h3>Simple Yet Revolutionary</h3>
+                        <div class="expandable-content">
+                            <p>The beauty of Space Invaders lies in its simplicity: slide left and right, fire one missile at a time, 
+                            defend Earth from 55 aliens marching in formation. The ominous marching sound speeds up as you destroy ships, 
+                            building tension with every shot.</p>
+                            <p>Like all games of its era, Space Invaders is futile—you will always lose, and the aliens will always win. 
+                            But how long can you last? That eternal challenge defined arcade gaming.</p>
+                            <p>The game introduced concepts that became standard: destructible cover, increasing difficulty, 
+                            and the psychological pressure of an advancing enemy that gets faster as you succeed.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
+                    </div>
+                    
+                    <div class="story-card" onclick="toggleExpand(this)">
+                        <h3>The First Licensing Deal</h3>
+                        <div class="expandable-content">
+                            <p>In 1980, Atari programmer Rick Maurer created a port for the Atari 2600, leading to the first official 
+                            licensing of an arcade game to a home console. The home version sold over 1 million copies in its first year, 
+                            turning the Atari 2600 into a massive success.</p>
+                            <p>The Atari version boasted "112 video games"—actually just variations including moving shields, 
+                            zigzagging missiles, and invisible invaders. This set the template for home gaming adaptations.</p>
+                            <p>This licensing deal established the business model that would dominate gaming for decades: 
+                            successful arcade games being adapted for home consoles, creating multiple revenue streams.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
+                    </div>
+                    
+                    <div class="story-card" onclick="toggleExpand(this)">
+                        <h3>Cultural Phenomenon</h3>
+                        <div class="expandable-content">
+                            <p>Space Invaders became one of the most widely ported games ever, appearing on everything from LED handhelds 
+                            to digital watches. It kicked off the entire shoot 'em up genre, inspiring Galaga, Galaxian, Defender, and countless others.</p>
+                            <p>The game's grid of aliens, shield barriers, and bonus UFO became iconic gaming symbols. Its influence extends 
+                            far beyond gaming—the pixelated alien is now a universal symbol of retro gaming culture.</p>
+                            <p>The success led to the "golden age" of arcade gaming (1978-1983), during which video games 
+                            became a dominant form of entertainment and a multi-billion dollar industry.</p>
+                        </div>
+                        <button class="expand-button">Click to Read More</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="impact-section">
+                <h2>Legacy & Impact</h2>
+                <ul class="impact-list">
+                    <li>Created the shoot 'em up genre that dominated arcades for years</li>
+                    <li>First game to cause a currency shortage due to popularity</li>
+                    <li>Pioneered the arcade-to-home licensing model</li>
+                    <li>Established high scores as the primary gaming achievement</li>
+                    <li>Introduced increasing difficulty through speed mechanics</li>
+                    <li>Inspired the "golden age" of arcade gaming (1978-1983)</li>
+                    <li>Created the template for enemy AI behavior patterns</li>
+                    <li>Established the concept of "waves" in gaming</li>
+                </ul>
+            </section>
+        </div>
+        
+        <nav class="game-nav">
+            <a href="pacman.html" class="nav-link">← Previous: Pac-Man</a>
+            <a href="super-mario.html" class="nav-link">Next: Super Mario Bros. →</a>
+        </nav>
+    </div>
+
+    <script src="static/js/space-invaders-mini.js"></script>
+    <script>
+        function toggleExpand(card) {
+            const content = card.querySelector('.expandable-content');
+            const button = card.querySelector('.expand-button');
+            
+            if (content.classList.contains('expanded')) {
+                content.classList.remove('expanded');
+                button.textContent = 'Click to Read More';
+            } else {
+                content.classList.add('expanded');
+                button.textContent = 'Click to Read Less';
+            }
+        }
+    </script>
+</body>
+</html>

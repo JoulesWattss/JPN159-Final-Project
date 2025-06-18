@@ -1,0 +1,13 @@
+{
+  "name": "pixel-pioneers-web",
+  "version": "1.0.0",
+  "description": "Pixel Pioneers web application - Static Site",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000",
+    "dev": "npx http-server . -p 3000"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

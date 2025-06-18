@@ -9,72 +9,457 @@
 /* body styling */
 body {
     font-family: 'Times New Roman', sans-serif !important;
-    background-color: #282828;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     color: #fff;
     text-align: center;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* dropdown menu container */
+/* main container */
 .game-container {
-    position: absolute;  /* Allows for precise positioning with top and left elements*/
-    top: 55%;            
-    left: 50%;           
-    transform: translate(-50%, -50%);  /* Ensure it stays centered */
     text-align: center;
+    max-width: 1000px;
+    padding: 2rem;
 }
 
-.dropdown {
-    position: relative;     
+.main-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 4rem;
+    color: #ffee07;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 0px #a515bb;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #d477cd;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+/* Timeline styling */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+.year {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 2rem;
+    color: #ffee07;
+    min-width: 100px;
+    text-shadow: 2px 2px 0px #a515bb;
+}
+
+.game-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s;
+}
+
+.game-button:hover::before {
+    left: 100%;
+}
+
+.pacman-button {
+    background: linear-gradient(135deg, #ffee07 0%, #ffd700 100%);
+    color: #000;
+}
+
+.invaders-button {
+    background: linear-gradient(135deg, #00ff00 0%, #32cd32 100%);
+    color: #000;
+}
+
+.mario-button {
+    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    color: #fff;
+}
+
+.game-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.game-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu-button {
     display: inline-block;
-  }  
-
-.dropdown-button {
-    /* Size adjustments */
-    padding: 50px 80px;
-    font-size: 40px;
-  
-    /* Color adjustments */
-    background-color: #a515bb; 
-    color: #FFFFFF;         
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    font-family: 'PacmanFont', sans-serif;
+    background-color: #a515bb;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    min-width: 250px;
 }
 
-.dropdown-content {
-    display: none;               /* hidden by default */
-    position: absolute;          /* now relative to relative .dropdown position */
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%); /* for perfect centering */
-    background-color: #333;
-    width: 200px;  
-    border-radius: 100px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;              /* show on hover of the entire dropdown container */
-  }
-
-.dropdown-button:active {
-    transform: scale(0.85);
+.menu-button:hover {
+    background-color: #d477cd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
 }
-  
-/* dropdown content specifications - applying PacmanFont to dropdown links */
 
-.dropdown-content a {
-    color: #f1f1f1;
-    padding: 12px 16px;
-    text-decoration-style: double;
-    text-decoration-color: #d477cd;
-    text-decoration-line: underline;
+.menu-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.guided-tour-button {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.guided-tour-button::before {
+    content: '🎬';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.guided-tour-button:hover {
+    background: linear-gradient(135deg, #ff8c42 0%, #ffb347 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 107, 53, 0.4);
+}
+
+/* Game page styling */
+.game-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.game-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pacman-title, .space-invaders-title, .mario-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 3px 3px 0px #a515bb;
+}
+
+.pacman-title {
+    color: #ffee07;
+}
+
+.space-invaders-title {
+    color: #00ff00;
+}
+
+.mario-title {
+    color: #ff4444;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: #d477cd;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.quote-section {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.quote-section blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #ffee07;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.quote-section cite {
+    color: #d477cd;
+    font-weight: bold;
+}
+
+.story-section h2 {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 2.5rem;
+    color: #ffee07;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 0px #a515bb;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.story-card {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.15);
+}
+
+.story-card h3 {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 1.5rem;
+    color: #ffee07;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 0px #a515bb;
+}
+
+.story-card p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.impact-section {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.impact-section h2 {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 2rem;
+    color: #ffee07;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 0px #a515bb;
+}
+
+.impact-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.impact-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    position: relative;
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.impact-list li:before {
+    content: "▶";
+    color: #ffee07;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.impact-list li:hover {
+    color: #ffee07;
+    padding-left: 2.5rem;
+}
+
+.game-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-link {
+    padding: 1rem 2rem;
+    font-family: 'PacmanFont', sans-serif;
+    background-color: #a515bb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.nav-link:hover {
+    background-color: #d477cd;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Mini Game Styles */
+.mini-game-section {
+    background: rgba(0,0,0,0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border: 2px solid #ffee07;
+}
+
+.mini-game-title {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 2rem;
+    color: #ffee07;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0px #a515bb;
+}
+
+.game-canvas {
+    border: 3px solid #a515bb;
+    border-radius: 10px;
+    background-color: #000;
+    margin: 1rem auto;
     display: block;
-    font-family: 'PacmanFont', sans-serif !important;
-    transition: background-color 0.3s;
 }
 
-/* Increase spacing between items */
-.dropdown-content a + a {
-    margin-top: 8px;         
-  }
+.game-controls {
+    margin-top: 1rem;
+    color: #d477cd;
+}
+
+.game-score {
+    font-family: 'PacmanFont', sans-serif;
+    font-size: 1.2rem;
+    color: #ffee07;
+    margin-top: 1rem;
+}
+
+/* Interactive Features */
+.expandable-content {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    position: relative;
+}
+
+.expandable-content.expanded {
+    max-height: none;
+}
+
+.expand-button {
+    background: linear-gradient(135deg, #a515bb, #d477cd);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'PacmanFont', sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.expand-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .year {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .game-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .pacman-title, .space-invaders-title, .mario-title {
+        font-size: 2.5rem;
+    }
+}
