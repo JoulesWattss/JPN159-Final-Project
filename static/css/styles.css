@@ -159,6 +159,27 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
+.guided-tour-button {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.guided-tour-button::before {
+    content: '🎬';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.guided-tour-button:hover {
+    background: linear-gradient(135deg, #ff8c42 0%, #ffb347 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 107, 53, 0.4);
+}
+
 /* Game page styling */
 .game-page-container {
     max-width: 1200px;
